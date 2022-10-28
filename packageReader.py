@@ -37,7 +37,7 @@ def main():
                 else:
                     name = channelData['name']
             except KeyError:
-                name = channelName.replace('Direct Message with ', '')
+                name = channelName.replace('Direct Message with ', '').split('#')[0]
 
         dayCounter = {}
         for row in channelMessages:
